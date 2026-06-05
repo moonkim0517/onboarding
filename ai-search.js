@@ -14,7 +14,7 @@
 
   const MODELS = {
     gemini: {
-      id: 'gemini-2.0-flash',
+      id: 'gemini-2.5-flash',
       label: 'Gemini',
       storageKey: 'pm_gemini_api_key',
     },
