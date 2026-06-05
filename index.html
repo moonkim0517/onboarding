@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propermarket Design Team Onboarding</title>
+  <meta name="description" content="Propermarket 디자인팀 온보딩 웹사이트">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- GNB -->
+  <nav class="gnb" id="gnb">
+    <div class="gnb-inner">
+      <a href="#home" class="gnb-logo"><img src="images/logo.svg" alt="Propermarket" class="gnb-logo__img"></a>
+      <button class="gnb-hamburger" id="gnb-hamburger" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="gnb-links" id="gnb-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#our-team">Our Team</a></li>
+        <li><a href="#how-we-work">How We Work</a></li>
+        <li><a href="#your-role">Your Role</a></li>
+        <li><a href="#get-started">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Section 01: Home -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-blob hero-blob--tr"></div>
+      <div class="hero-blob hero-blob--bl"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-headline hero-kinetic fade-in" aria-label="Welcome Jisol!"><span aria-hidden="true" class="k-letter">W</span><span aria-hidden="true" class="k-letter">e</span><span aria-hidden="true" class="k-letter">l</span><span aria-hidden="true" class="k-letter">c</span><span aria-hidden="true" class="k-letter">o</span><span aria-hidden="true" class="k-letter">m</span><span aria-hidden="true" class="k-letter">e</span><span aria-hidden="true" class="k-letter">&nbsp;</span><span aria-hidden="true" class="k-letter">J</span><span aria-hidden="true" class="k-letter">i</span><span aria-hidden="true" class="k-letter">s</span><span aria-hidden="true" class="k-letter">o</span><span aria-hidden="true" class="k-letter">l</span><span aria-hidden="true" class="k-letter">!</span></h1>
+      <div class="ai-input-wrap fade-in" id="ai-input-wrap">
+        <div class="ai-input-box" id="ai-input-box">
+          <!-- Input row -->
+          <div class="ai-input-row">
+            <div class="ai-input-field">
+              <input type="text" class="ai-input-text" id="ai-input-text" autocomplete="off" spellcheck="false">
+              <div class="ai-input-placeholder" id="ai-input-placeholder" aria-hidden="true"></div>
+            </div>
+            <button class="ai-input-send" id="ai-input-send" type="button" aria-label="전송">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+            </button>
+          </div>
+          <!-- Expanded controls -->
+          <div class="ai-input-controls" id="ai-input-controls">
+            <button class="ai-input-pill" id="ai-pill-think" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7C9.24 7 7 9.24 7 12c0 1.36.54 2.6 1.43 3.5.34.35.62.77.72 1.25l.53 2.64a1.5 1.5 0 001.47 1.21h1.7a1.5 1.5 0 001.47-1.21l.53-2.64c.1-.48.38-.9.72-1.25A5 5 0 0017 12c0-2.76-2.24-5-5-5z"/><path d="M12 4V3"/><path d="M18 6l1-1"/><path d="M20 12h1"/><path d="M4 12H3"/><path d="M5 5l1 1"/><line x1="10" y1="17" x2="14" y2="17"/></svg>
+              <span>Think</span>
+            </button>
+            <button class="ai-input-pill ai-input-pill--icon" id="ai-pill-search" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint fade-in">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Section 02: Our Team -->
+  <section class="section section--dark" id="our-team">
+    <div class="container">
+      <span class="section-label section-label--light fade-in">OUR TEAM</span>
+      <div class="confetti-title-wrap" id="confetti-title-wrap">
+        <h2 class="section-title section-title--light fade-in">함께 일하게 될 동료들</h2>
+        <canvas class="confetti-canvas" id="confetti-canvas"></canvas>
+      </div>
+      <p class="section-desc section-desc--light fade-in">각자의 전문성으로 더 나은 디자인을 만들어가는 팀이에요.</p>
+
+      <div class="orbital-wrap fade-in" id="orbital-wrap">
+        <!-- Orbit track ring -->
+        <div class="orbital-track" aria-hidden="true"></div>
+
+        <!-- Member: 김문준 -->
+        <div class="orbital-node" data-id="0" role="button" tabindex="0" aria-label="김문준 프로필 보기">
+          <div class="orbital-node__halo" aria-hidden="true"></div>
+          <div class="orbital-node__avatar"><img src="images/김문준.png" alt="김문준"></div>
+          <div class="orbital-node__name">김문준</div>
+          <div class="orbital-card orbital-card--blue" aria-hidden="true">
+            <div class="orbital-card__tags">
+              <div class="orbital-card__mbti">INTJ</div>
+              <div class="orbital-card__feature">Climber</div>
+            </div>
+            <div class="orbital-card__name">김문준</div>
+            <div class="orbital-card__role">디자인 리드</div>
+            <p class="orbital-card__desc">BI/BX &amp; UI/UX, 브랜드 시스템</p>
+          </div>
+        </div>
+
+        <!-- Member: 윤세영 -->
+        <div class="orbital-node" data-id="1" role="button" tabindex="0" aria-label="윤세영 프로필 보기">
+          <div class="orbital-node__halo" aria-hidden="true"></div>
+          <div class="orbital-node__avatar"><img src="images/윤세영.png" alt="윤세영"></div>
+          <div class="orbital-node__name">윤세영</div>
+          <div class="orbital-card orbital-card--purple" aria-hidden="true">
+            <div class="orbital-card__tags">
+              <div class="orbital-card__mbti">ENTJ</div>
+              <div class="orbital-card__feature">Fitness</div>
+            </div>
+            <div class="orbital-card__name">윤세영</div>
+            <div class="orbital-card__role">브랜드 디자이너</div>
+            <p class="orbital-card__desc">디자인 에셋, 상세페이지, 리플렛, 오프라인</p>
+          </div>
+        </div>
+
+        <!-- Member: 박민지 -->
+        <div class="orbital-node" data-id="2" role="button" tabindex="0" aria-label="박민지 프로필 보기">
+          <div class="orbital-node__halo" aria-hidden="true"></div>
+          <div class="orbital-node__avatar"><img src="images/박민지.png" alt="박민지"></div>
+          <div class="orbital-node__name">박민지</div>
+          <div class="orbital-card orbital-card--yellow" aria-hidden="true">
+            <div class="orbital-card__tags">
+              <div class="orbital-card__mbti">ENFP</div>
+              <div class="orbital-card__feature">Camping</div>
+            </div>
+            <div class="orbital-card__name">박민지</div>
+            <div class="orbital-card__role">브랜드 디자이너</div>
+            <p class="orbital-card__desc">프로모션, 미디어 커머스, 인스타그램</p>
+          </div>
+        </div>
+
+        <!-- Member: 남현우 -->
+        <div class="orbital-node" data-id="3" role="button" tabindex="0" aria-label="남현우 프로필 보기">
+          <div class="orbital-node__halo" aria-hidden="true"></div>
+          <div class="orbital-node__avatar"><img src="images/남현우.png" alt="남현우"></div>
+          <div class="orbital-node__name">남현우</div>
+          <div class="orbital-card orbital-card--green" aria-hidden="true">
+            <div class="orbital-card__tags">
+              <div class="orbital-card__mbti">INFP</div>
+              <div class="orbital-card__feature">Food Fighter</div>
+            </div>
+            <div class="orbital-card__name">남현우</div>
+            <div class="orbital-card__role">브랜드 디자이너</div>
+            <p class="orbital-card__desc">패키지 디자인, 그래픽 디자인, 프로모션</p>
+          </div>
+        </div>
+
+        <!-- Center: 이지솔 -->
+        <div class="orbital-center">
+          <div class="orbital-center__bubble">
+            <div class="orbital-center__ring orbital-center__ring--1" aria-hidden="true"></div>
+            <div class="orbital-center__ring orbital-center__ring--2" aria-hidden="true"></div>
+            <div class="orbital-center__dot"><span>솔</span></div>
+          </div>
+          <div class="orbital-center__meta">
+            <span class="orbital-center__name">이지솔</span>
+            <span class="orbital-center__badge">New</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 03: How We Work -->
+  <section class="section section--dark-gradient" id="how-we-work">
+    <div class="container">
+      <h2 class="section-title section-title--light fade-in" id="typewriter-title"><span id="typewriter-text"></span><span class="typewriter-cursor" aria-hidden="true">|</span></h2>
+
+      <!-- Loop text animation -->
+      <div class="loop-anim fade-in" id="loop-anim">
+        <span class="loop-anim__label">How we work</span>
+        <div class="loop-anim__line" aria-hidden="true"></div>
+        <div class="loop-anim__stage">
+          <div class="loop-anim__text" id="loop-text"></div>
+        </div>
+        <div class="sparkles-core" id="sparkles-core" aria-hidden="true">
+          <canvas id="sparkles-canvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 04: Your Role -->
+  <section class="section section--yellow-glow" id="your-role">
+    <div class="container">
+      <h2 class="section-title sparkles-text fade-in" style="text-align:center;max-width:none;" id="sparkles-text"><span class="sparkles-text__inner">Mile Stone</span></h2>
+
+      <div class="display-cards fade-in">
+        <!-- Card 1 (back) — 3개월 -->
+        <div class="display-card display-card--back">
+          <div class="display-card__head">
+            <span class="display-card__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.912 5.813a2 2 0 001.272 1.272L21 12l-5.813 1.912a2 2 0 00-1.272 1.272L12 21l-1.912-5.813a2 2 0 00-1.272-1.272L3 12l5.813-1.912a2 2 0 001.272-1.272z"/></svg>
+            </span>
+            <p class="display-card__title">3개월 리뷰</p>
+          </div>
+          <p class="display-card__desc">수습기간 끝. UX 개선 프로젝트 주도</p>
+          <p class="display-card__date">September 8th</p>
+        </div>
+
+        <!-- Card 2 (middle) — 1.5개월 -->
+        <div class="display-card display-card--mid">
+          <div class="display-card__head">
+            <span class="display-card__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.912 5.813a2 2 0 001.272 1.272L21 12l-5.813 1.912a2 2 0 00-1.272 1.272L12 21l-1.912-5.813a2 2 0 00-1.272-1.272L3 12l5.813-1.912a2 2 0 001.272-1.272z"/></svg>
+            </span>
+            <p class="display-card__title">1.5개월 리뷰</p>
+          </div>
+          <p class="display-card__desc">팀 업무 파악 완료 &amp; 첫 독립 작업 완수</p>
+          <p class="display-card__date">July 23th</p>
+        </div>
+
+        <!-- Card 3 (front) — 5일차 -->
+        <div class="display-card display-card--front">
+          <div class="display-card__head">
+            <span class="display-card__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.912 5.813a2 2 0 001.272 1.272L21 12l-5.813 1.912a2 2 0 00-1.272 1.272L12 21l-1.912-5.813a2 2 0 00-1.272-1.272L3 12l5.813-1.912a2 2 0 001.272-1.272z"/></svg>
+            </span>
+            <p class="display-card__title">5일차</p>
+          </div>
+          <p class="display-card__desc">고객 파악 리포트 발표</p>
+          <p class="display-card__date">June 16th</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 05: Get Started -->
+  <section class="section section--aurora" id="get-started">
+    <div class="aurora-bg" aria-hidden="true">
+      <div class="aurora-bg__layer"></div>
+    </div>
+    <div class="container container--center">
+      <span class="section-label fade-in">GET STARTED</span>
+      <h2 class="section-title fade-in">첫 주 체크리스트</h2>
+      <p class="section-desc fade-in">하나씩 완료하면서 팀에 자연스럽게 녹아들어 보세요.</p>
+
+      <!-- Checklist box -->
+      <div class="checklist-box fade-in">
+        <ul class="checklist" id="checklist">
+          <li class="checklist-item" data-key="check-greet">
+            <label class="checklist-label">
+              <input type="checkbox" class="checklist-input">
+              <span class="checklist-checkbox"></span>
+              <span class="checklist-text">조직도 &amp; 사람들에게 인사하기</span>
+            </label>
+          </li>
+          <li class="checklist-item" data-key="check-setup">
+            <label class="checklist-label">
+              <input type="checkbox" class="checklist-input">
+              <span class="checklist-checkbox"></span>
+              <span class="checklist-text">업무 세팅 (구글 계정, 어도비 계정, Figma 계정)</span>
+            </label>
+          </li>
+          <li class="checklist-item" data-key="check-calendar">
+            <label class="checklist-label">
+              <input type="checkbox" class="checklist-input">
+              <span class="checklist-checkbox"></span>
+              <span class="checklist-text">구글 캘린더 사용 방법 확인하기 (회의실 잡기, 하루 일과 공유)</span>
+            </label>
+          </li>
+          <li class="checklist-item" data-key="check-docs">
+            <label class="checklist-label">
+              <input type="checkbox" class="checklist-input">
+              <span class="checklist-checkbox"></span>
+              <span class="checklist-text">디자인 요청시트 &amp; OKR 문서 읽기</span>
+            </label>
+          </li>
+          <li class="checklist-item" data-key="check-projects">
+            <label class="checklist-label">
+              <input type="checkbox" class="checklist-input">
+              <span class="checklist-checkbox"></span>
+              <span class="checklist-text">현재 진행 중인 프로젝트 파악</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Link buttons -->
+      <div class="link-btns fade-in">
+        <a href="https://docs.google.com/spreadsheets/d/18JBCumFIvrzbyJCP7i0hnQKBMeSWu2znYWtMZ4g2_H4/edit?pli=1&gid=1692165383#gid=1692165383" target="_blank" rel="noopener noreferrer" class="link-btn link-btn--indigo">
+          <div class="link-btn__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+          </div>
+          <div class="link-btn__text">
+            <p class="link-btn__title">2026 Design Hub</p>
+          </div>
+          <div class="link-btn__arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+        <a href="https://docs.google.com/spreadsheets/d/1ydPab0zAQlWTkAMbyKfrsxq3Z9VWcj2Di-1jujAHa2A/edit?pli=1&gid=128441942#gid=128441942" target="_blank" rel="noopener noreferrer" class="link-btn link-btn--emerald">
+          <div class="link-btn__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="link-btn__text">
+            <p class="link-btn__title">디자인 요청시트</p>
+          </div>
+          <div class="link-btn__arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+        <a href="https://docs.google.com/spreadsheets/d/1lsMSODu6M2KsRLGwn7noKdv7ICCD_DW--g6lN1Z9jIA/edit?gid=821676229#gid=821676229" target="_blank" rel="noopener noreferrer" class="link-btn link-btn--amber">
+          <div class="link-btn__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <div class="link-btn__text">
+            <p class="link-btn__title">디자인팀 OKR</p>
+          </div>
+          <div class="link-btn__arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+        <a href="https://drive.google.com/drive/u/0/folders/1H4s9mHpO0qG1VMKd1HpwEx0F5xvkM_AG" target="_blank" rel="noopener noreferrer" class="link-btn link-btn--rose">
+          <div class="link-btn__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          </div>
+          <div class="link-btn__text">
+            <p class="link-btn__title">프로퍼마켓 공식몰 리포트 자료</p>
+          </div>
+          <div class="link-btn__arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+        <a href="https://drive.google.com/drive/u/0/folders/0AKVgA6dQMbOpUk9PVA" target="_blank" rel="noopener noreferrer" class="link-btn link-btn--sky">
+          <div class="link-btn__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+          </div>
+          <div class="link-btn__text">
+            <p class="link-btn__title">Google Drive</p>
+          </div>
+          <div class="link-btn__arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+        <a href="https://datastudio.google.com/u/0/reporting/6beb22f5-19a9-4c3f-9d1d-86be922b746a/page/p_t9notkix1d" target="_blank" rel="noopener noreferrer" class="link-btn link-btn--violet">
+          <div class="link-btn__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="link-btn__text">
+            <p class="link-btn__title">프로퍼마켓 통합대시보드</p>
+          </div>
+          <div class="link-btn__arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+        <a href="https://calendar.google.com/calendar/u/0/r/day/2026/6/4?pli=1" target="_blank" rel="noopener noreferrer" class="link-btn link-btn--teal">
+          <div class="link-btn__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="link-btn__text">
+            <p class="link-btn__title">프로퍼마켓 구글 캘린더</p>
+          </div>
+          <div class="link-btn__arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Search Modal -->
+  <div class="ai-modal-overlay" id="ai-modal-overlay">
+    <div class="ai-modal" id="ai-modal" role="dialog" aria-label="AI 검색">
+      <div class="ai-modal__header">
+        <h3 class="ai-modal__title">AI 온보딩 어시스턴트</h3>
+        <div class="ai-modal__header-right">
+          <div class="ai-model-select">
+            <select id="ai-model-select">
+              <option value="gemini">Gemini</option>
+              <option value="claude">Claude</option>
+            </select>
+          </div>
+          <button class="ai-modal__close" id="ai-modal-close" aria-label="닫기">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="ai-modal__messages" id="ai-messages">
+        <div class="ai-msg ai-msg--ai">
+          <div class="ai-msg__bubble">안녕하세요! Propermarket 디자인팀 온보딩 어시스턴트입니다. 팀, 업무, 툴 등에 대해 무엇이든 물어보세요.</div>
+        </div>
+      </div>
+      <div class="ai-modal__uploaded" id="ai-uploaded" style="display:none;">
+        <span class="ai-uploaded__label">업로드된 문서:</span>
+        <span class="ai-uploaded__files" id="ai-uploaded-files"></span>
+      </div>
+      <div class="ai-modal__input-area">
+        <label class="ai-upload-btn" aria-label="문서 업로드">
+          <input type="file" id="ai-file-input" accept=".md,.pdf,.txt" hidden>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/>
+          </svg>
+        </label>
+        <input
+          type="text"
+          class="ai-modal__input"
+          id="ai-input"
+          placeholder="질문을 입력하세요..."
+          autocomplete="off"
+        >
+        <button class="ai-modal__send" id="ai-send" aria-label="전송">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </div>
+      <div class="ai-modal__footer">
+        <button class="ai-apikey-toggle" id="ai-apikey-toggle">API Key 설정</button>
+        <div class="ai-apikey-field" id="ai-apikey-field" style="display:none;">
+          <div class="ai-apikey-row">
+            <label class="ai-apikey-label">Gemini</label>
+            <input type="password" class="ai-apikey-input" id="ai-apikey-gemini" placeholder="AIza...">
+            <button class="ai-apikey-save" id="ai-apikey-save-gemini">저장</button>
+          </div>
+          <div class="ai-apikey-row">
+            <label class="ai-apikey-label">Claude</label>
+            <input type="password" class="ai-apikey-input" id="ai-apikey-claude" placeholder="sk-ant-...">
+            <button class="ai-apikey-save" id="ai-apikey-save-claude">저장</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="ai-search.js"></script>
+</body>
+</html>
