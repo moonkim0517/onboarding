@@ -60,7 +60,19 @@
 
 [마일스톤]
 - 1.5개월: 팀 업무 파악 완료, 첫 독립 작업 완수
-- 3개월: UX 개선 프로젝트 주도, 팀 내 디자이너로 자리잡기`;
+- 3개월: UX 개선 프로젝트 주도, 팀 내 디자이너로 자리잡기
+
+[지식 베이스 활용 규칙]
+아래 [회사 지식 베이스]에 회사·브랜드·전략·프로젝트 관련 상세 문서가 있습니다.
+회사 관련 질문에는 반드시 이 지식 베이스 내용을 우선 근거로 답변하세요.
+지식 베이스에 없는 내용은 모른다고 솔직히 말하고, 추측하지 마세요.`;
+
+  // 회사 지식 베이스(knowledge.md)를 비동기로 로드
+  let KNOWLEDGE = '';
+  fetch('knowledge.md')
+    .then((r) => (r.ok ? r.text() : ''))
+    .then((t) => { KNOWLEDGE = t; })
+    .catch(() => {});
 
   /* ----- DOM References ----- */
   const overlay           = document.getElementById('ai-modal-overlay');
@@ -224,6 +236,9 @@
      ============================================= */
   function getSystemText() {
     let text = SITE_CONTEXT;
+    if (KNOWLEDGE) {
+      text += `\n\n========== [회사 지식 베이스] ==========\n${KNOWLEDGE}`;
+    }
     if (uploadedDocContext) {
       text += `\n\n[업로드된 문서 내용]\n${uploadedDocContext}`;
     }
