@@ -26,7 +26,7 @@ export async function onRequestPost(context) {
 
   try {
     const { contents, systemInstruction, generationConfig } = await request.json();
-    const modelId = 'gemini-2.0-flash';
+    const modelId = 'gemini-2.5-flash';
     const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${modelId}:generateContent?key=${apiKey}`;
 
     const response = await fetch(endpoint, {
