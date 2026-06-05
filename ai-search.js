@@ -8,7 +8,7 @@
 
   /* ----- Models ----- */
   const DEFAULT_KEYS = {
-    gemini: 'AIzaSyB_elbNyqEsgcFhRqAw_-zYy_tiwuw9pvo',
+    gemini: '',
     claude: '',
   };
 
@@ -225,34 +225,47 @@
      ============================================= */
   async function callGemini(userText) {
     const apiKey = getApiKey('gemini');
-    if (!apiKey) {
-      appendMessage('ai', 'Gemini API 키가 설정되지 않았습니다. 하단의 "API Key 설정"을 클릭하여 키를 입력해 주세요.');
-      return;
-    }
 
     geminiHistory.push({ role: 'user', parts: [{ text: userText }] });
 
-    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${MODELS.gemini.id}:generateContent?key=${apiKey}`;
-
-    const response = await fetch(endpoint, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        systemInstruction: { parts: [{ text: getSystemText() }] },
-        contents: geminiHistory,
-        generationConfig: {
-          maxOutputTokens: MAX_TOKENS,
-          temperature: 0.7,
-        },
-      }),
-    });
+    let response;
+    // API 키가 있으면 직접 호출, 없으면 서버리스 백엔드 프록시 호출
+    if (apiKey) {
+      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${MODELS.gemini.id}:generateContent?key=${apiKey}`;
+      response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          systemInstruction: { parts: [{ text: getSystemText() }] },
+          contents: geminiHistory,
+          generationConfig: {
+            maxOutputTokens: MAX_TOKENS,
+            temperature: 0.7,
+          },
+        }),
+      });
+    } else {
+      const endpoint = '/api/gemini';
+      response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          systemInstruction: { parts: [{ text: getSystemText() }] },
+          contents: geminiHistory,
+          generationConfig: {
+            maxOutputTokens: MAX_TOKENS,
+            temperature: 0.7,
+          },
+        }),
+      });
+    }
 
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
-      const errorMsg  = errorData.error?.message || `HTTP ${response.status}`;
+      const errorMsg  = errorData.error?.message || errorData.error || `HTTP ${response.status}`;
       geminiHistory.pop();
 
-      if (response.status === 401 || response.status === 403) {
+      if (apiKey && (response.status === 401 || response.status === 403)) {
         throw new Error(`API 키 오류 (${response.status}): ${errorMsg}\n"API Key 설정"에서 올바른 Gemini API 키를 확인해 주세요.`);
       }
       throw new Error(`Gemini 오류 (${response.status}): ${errorMsg}`);
@@ -320,7 +333,8 @@
     const provider = getSelectedModel();
     const apiKey   = getApiKey(provider);
 
-    if (!apiKey) {
+    // Gemini는 백엔드 프록시(/api/gemini)가 존재하므로 브라우저 API 키가 없어도 계속 진행합니다.
+    if (!apiKey && provider !== 'gemini') {
       appendMessage('ai', `${MODELS[provider].label} API 키가 설정되지 않았습니다. 하단의 "API Key 설정"을 클릭하여 키를 입력해 주세요.`);
       return;
     }
