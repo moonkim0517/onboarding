@@ -157,6 +157,11 @@
     if (key) {
       saveApiKey('gemini', key);
       appendMessage('ai', 'Gemini API 키가 저장되었습니다.');
+    } else {
+      try {
+        localStorage.removeItem(MODELS.gemini.storageKey);
+        appendMessage('ai', 'Gemini API 키가 초기화되었습니다. 이제 서버 공용 API 키를 사용합니다.');
+      } catch (e) { /* silent */ }
     }
   });
 
@@ -165,6 +170,11 @@
     if (key) {
       saveApiKey('claude', key);
       appendMessage('ai', 'Claude API 키가 저장되었습니다.');
+    } else {
+      try {
+        localStorage.removeItem(MODELS.claude.storageKey);
+        appendMessage('ai', 'Claude API 키가 초기화되었습니다.');
+      } catch (e) { /* silent */ }
     }
   });
 
