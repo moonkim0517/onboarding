@@ -716,7 +716,7 @@
   if (!heroSection || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   /* --- Config --- */
-  const QUANTITY   = 300;
+  const QUANTITY   = 250;
   const STATICITY  = 50;
   const EASE       = 80;
   const BASE_SIZE  = 0.4;
