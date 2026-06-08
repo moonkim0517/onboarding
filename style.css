@@ -1534,6 +1534,10 @@ img {
 .link-btn--sky .link-btn__icon { background: linear-gradient(135deg, rgba(14,165,233,0.15), rgba(14,165,233,0.08)); color: #0ea5e9; }
 .link-btn--sky:hover { border-color: rgba(14,165,233,0.5); box-shadow: 0 8px 32px rgba(14,165,233,0.15); }
 
+.link-btn--cyan { border-color: rgba(6, 182, 212, 0.25); background: linear-gradient(135deg, rgba(6,182,212,0.08), rgba(6,182,212,0.04), rgba(6,182,212,0.1)); }
+.link-btn--cyan .link-btn__icon { background: linear-gradient(135deg, rgba(6,182,212,0.15), rgba(6,182,212,0.08)); color: #06b6d4; }
+.link-btn--cyan:hover { border-color: rgba(6,182,212,0.5); box-shadow: 0 8px 32px rgba(6,182,212,0.15); }
+
 .link-btn--violet { border-color: rgba(139, 92, 246, 0.25); background: linear-gradient(135deg, rgba(139,92,246,0.08), rgba(139,92,246,0.04), rgba(139,92,246,0.1)); }
 .link-btn--violet .link-btn__icon { background: linear-gradient(135deg, rgba(139,92,246,0.15), rgba(139,92,246,0.08)); color: #8b5cf6; }
 .link-btn--violet:hover { border-color: rgba(139,92,246,0.5); box-shadow: 0 8px 32px rgba(139,92,246,0.15); }
