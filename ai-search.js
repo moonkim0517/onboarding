@@ -1,5 +1,5 @@
 /* ============================================
-   Propermarket Design Team Onboarding
+   PROPER MARKET Design Team Onboarding
    ai-search.js — AI Search Modal (Gemini + Claude)
    ============================================ */
 
@@ -27,9 +27,10 @@
 
   const MAX_TOKENS = 1024;
 
-  const SITE_CONTEXT = `당신은 Propermarket 디자인팀의 온보딩 어시스턴트입니다.
+  const SITE_CONTEXT = `당신은 PROPER MARKET 디자인팀의 온보딩 어시스턴트입니다.
 팀 정보, 업무 방식, 툴 사용법에 대해 친근하고 명확하게 답변하세요.
 짧고 핵심적으로 답변하되, 필요하면 상세히 설명하세요.
+브랜드명은 언제나 "PROPER MARKET"으로만 표기하세요. 다른 대소문자나 한글 브랜드명으로 바꿔 쓰지 마세요.
 
 [팀 구성]
 - 김문준 (디자인 리드): BI/BX, UI/UX, 브랜드 시스템 담당
